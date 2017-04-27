@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://dev.zengjunxiang.com/2017/04/27/hexo博客搭建/index.html">
 <meta property="og:site_name" content="Elives的后花园">
 <meta property="og:description" content="坑：本地搭建成功，部署到github上，运行，报4041:注意仓库名，一定要是用户名.github.io2:要把仓库的github page开起来3：修改根目录下——config.yml核心配置：部署参数如图 deploy:  type: git  repository: https://github.com/zengjunxiang/zengjunxiang.github.io.git  bra">
-<meta property="og:updated_time" content="2017-04-27T01:43:12.848Z">
+<meta property="og:updated_time" content="2017-04-27T01:56:36.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客搭建">
 <meta name="twitter:description" content="坑：本地搭建成功，部署到github上，运行，报4041:注意仓库名，一定要是用户名.github.io2:要把仓库的github page开起来3：修改根目录下——config.yml核心配置：部署参数如图 deploy:  type: git  repository: https://github.com/zengjunxiang/zengjunxiang.github.io.git  bra">
@@ -304,9 +304,13 @@
         <p>坑：<br>本地搭建成功，部署到github上，运行，报404<br>1:注意仓库名，一定要是用户名.github.io<br>2:要把仓库的github page开起来<br>3：修改根目录下——config.yml核心配置：部署参数如图</p>
 <p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/zengjunxiang/zengjunxiang.github.io.git" target="_blank" rel="external">https://github.com/zengjunxiang/zengjunxiang.github.io.git</a><br>  branch: master</p>
 <p>注意，值的前面有空格</p>
-<p>部署步骤：<br>0:部署前，在本地安装git,node.js,<br>1：在本地初始化hexo,部署成功的标志是，可以访问localhost：4000<br>2：新建github的用户名.github.io的残酷，<br>2：通过——config.yml的配置 与github上的仓库进行关联<br>2：可以不用ssh秘钥 部署</p>
+<p>部署步骤：<br>0:部署前，在本地安装git,node.js,<br>1：在本地初始化hexo,部署成功的标志是，可以访问localhost：4000<br>2：新建github的用户名.github.io的残酷，<br>2：通过——config.yml的配置 与github上的仓库进行关联<br>3：可以不用ssh秘钥 部署</p>
+<p>自定义域名：<br>1：source文件夹的根目录下，新建一个文件名为：CNAME的文件，注意，没有后缀名 ，不要后缀名默认为txt了，用文本编辑器打开，编写内容为自定义的域名，不要http:// eg.：dev.zengjunxiang.com<br>2：修改根目录下的整站的配置文件_cogfig.yml：</p>
+<h2 id="If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘"><a href="#If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘" class="headerlink" title="If your site is put in a subdirectory, set url as ‘http://yoursite.com/child‘ and root as ‘/child/‘"></a>If your site is put in a subdirectory, set url as ‘<a href="http://yoursite.com/child" target="_blank" rel="external">http://yoursite.com/child</a>‘ and root as ‘/child/‘</h2><p>url: <a href="http://dev.zengjunxiang.com">http://dev.zengjunxiang.com</a>  注意，有空格</p>
+<p>3：添加解析：</p>
 <p>常用命令：</p>
 <p>hexo clean 清除缓存<br>hexo g 生成 静态页面<br>hexo d 部署</p>
+<p>hexo new 文件名。 写博客</p>
 
       
     </div>
@@ -318,7 +322,7 @@
         <p><span>本文标题:</span><a href="/2017/04/27/hexo博客搭建/">hexo博客搭建</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Elives</a></p>
         <p><span>发布时间:</span>2017-04-27, 09:22:27</p>
-        <p><span>最后更新:</span>2017-04-27, 09:43:12</p>
+        <p><span>最后更新:</span>2017-04-27, 09:56:36</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/04/27/hexo博客搭建/" title="hexo博客搭建">http://dev.zengjunxiang.com/2017/04/27/hexo博客搭建/</a>
             <span class="copy-path" data-clipboard-text="原文: http://dev.zengjunxiang.com/2017/04/27/hexo博客搭建/　　作者: Elives" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -348,7 +352,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘"><span class="toc-number">1.</span> <span class="toc-text">If your site is put in a subdirectory, set url as ‘http://yoursite.com/child‘ and root as ‘/child/‘</span></a></li></ol>
         
     </div>
     <style>
