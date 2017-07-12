@@ -142,13 +142,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜单</li>
+                        <li>标签</li>
                         
-                        <li>Friends</li>
+                        <li>友情链接</li>
                         
                         
-                        <li>About Me</li>
+                        <li>关于我</li>
                         
                     </ul>
                 </div>
@@ -177,10 +177,6 @@
                                 <a class="fa Email" href="mailto:niaidaziran@163.com" title="Email"></a>
                             
                                 <a class="fa GitHub" href="http://github.com/zengjunxiang" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                                <a class="fa QQ" href="/674334638" title="QQ"></a>
                             
                         </ul>
                     </nav>
@@ -258,17 +254,347 @@
                             
                                 <a class="fa GitHub" target="_blank" href="http://github.com/zengjunxiang" title="GitHub"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                                <a class="fa QQ" target="_blank" href="/674334638" title="QQ"></a>
-                            
                         </ul>
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-自定义View" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/07/12/自定义View/" class="article-date">
+      <time datetime="2017-07-12T08:46:43.725Z" itemprop="datePublished">2017-07-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>标题</p>
+<p>setext形式即用底线形式：最高级标题（=），二级标题（-）任何数量的‘=’和‘-’效果一样。</p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>展示方式：</p>
+<p>这是一级标题<br>atx形式：在行首插入1~6个’#’，分别对应1~6级标题（行尾的‘#’与效果无关）。</p>
+<h1 id="这是一级标题-1"><a href="#这是一级标题-1" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>展示方式：</p>
+<p>这是一级标题<br>区块引言</p>
+<p>在MD文件中建立一个区块引言，看起来像是强迫断行，然后在每行最前面加‘&gt;’,并且可循环套用。:</p>
+<blockquote>
+<p>区块引言文本1</p>
+<blockquote>
+<p>子区块引言文本2<br>展示方式：</p>
+</blockquote>
+</blockquote>
+<p>区块引言文本1</p>
+<p>子区块引言文本2<br>区块引言也允许在整个段落的第一行最前面加上‘&gt;’:</p>
+<blockquote>
+<p>这是个段落<br>段落中的详细文本。<br>blablabla。<br>展示方式:</p>
+</blockquote>
+<p>这是个段落<br>段落中的详细文本。<br>blablabla。<br>区块引言中亦可使用其它MD语法，包括标题、清单、程式等：</p>
+<blockquote>
+<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><ol>
+<li>有序列表1.</li>
+<li>有序列表2</li>
+</ol>
+<p>代码实例：</p>
+<p>return shell_exec(“echo $input | $markdown_script”);<br>展示方式：</p>
+</blockquote>
+<p>二级标题</p>
+<p>有序列表1.<br>有序列表2<br>代码实例：</p>
+<p>return shell_exec(“echo $input | $markdown_script”);<br>清单</p>
+<p>MD支持有序列表和无序列表。</p>
+<p>无序列表使用*、+、-作为清单标记。(混用亦可)</p>
+<ul>
+<li>red</li>
+</ul>
+<ul>
+<li>Green</li>
+</ul>
+<ul>
+<li>blue<br>展示方式：</li>
+</ul>
+<p>red<br>Green<br>blue<br>有序列表使用数字接着一个英文句点：</p>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish<br>展示方式：</li>
+</ol>
+<p>Bird<br>McHale<br>Parish<br>可以让MD文件的清单数字和输出的结果一致，也可不一致，即随意输入数字;</p>
+<p>建议从1.开始，因为MD未来可能会有序列表的start属性。</p>
+<p>关于清单列表的缩排：</p>
+<p>清单标记通常放在最左边，其实亦可缩排，最多3个空白,但标记后面一定要接着至少一个空白或tab。</p>
+<p>清單項目可以包含多個段落，每個項目下的段落都必須縮排4個空白或是一個tab<br>在行首出现不预知的数字-句点-空白情况，可以在句点前加反斜杠<code>\</code>避免。</p>
+<ul>
+<li>这是第一行文本。<br>（加3个空白或者tab）这是第二行文本。<br>展示方式</li>
+</ul>
+<p>这是第一行文本。<br>这是第二行文本。<br>清单内引用区块引言，则&gt;需要缩进：</p>
+<ul>
+<li>在清单中内置区块引用：<br>(空白或tab) &gt; 需要缩排<br>展示方式：</li>
+</ul>
+<p>在清单中内置区块引用：</p>
+<blockquote>
+<p>需要缩排<br>如果要放程式区块的话，该区块引言就要缩排2次，即8个空白或2个tab:</p>
+</blockquote>
+<ul>
+<li>列表中放入代码：<br>(2个tab或8个空白缩进)代码在这里<br>展示方式:</li>
+</ul>
+<p>列表中放入代码：<br> NSLog(@”hello world”);<br>代码区块</p>
+<p>代码或者标识语言原始码写作通常已经有排版好的区块。故我们并不希望它以一般段落文本的方式去排版，而是原样输出即可。<br>MD自动会用<pre>和<code>标识来将代码块包起来。<br>_在程式碼區塊裡面，&amp;、&lt;和&gt;會自動轉成HTML實體，這樣的方式讓你非常容易使用Markdown插入範例用的HTML原始碼，只需要複製貼上，再加上縮排就可以了，剩下的Markdown都會幫你處理，<br>在MD中建立代码区块，只要简单的 缩排4个空白或1个tab即可。 (一个代码块会一直持续到没有缩排的那一行) ：</code></pre></p>
+<p>下面是个代码区块展示：<br>(4个空白或1个tab)NSLog(@”hello world”) ;<br>展示方式：<br>下面是个代码区块展示：</p>
+<p>NSLog(@”hello world”) ;<br>NSLog(@”hello china”) ;<br> <em> 附录：程式碼區塊中，一般的Markdown語法不會被轉換，像是星號便只是星號，這表示你可以很容易地以Markdown語法撰寫Markdown語法相關的文件。</em><br>分割线</p>
+<p>可在一行中用3个或者以上的<em>、-、<em>来建立一个分割线，但行内不能有其它元素。
+</em>亦可在</em>中间插入空白，均可建立分割线。<br>本示例以及下文中的MD原始语法，均以代码块的形式展示</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>展示方式：</p>
+<p>区段元素</p>
+<p>MD支持2种形式的链接语法：行内链接和参考链接。<br>链接的文字均是用[链接文字]来标识。<br>  行内链接<br>  这是 <a href="http://www.baidu.com/" title="title" target="_blank" rel="external">示例1</a> inline link.<br> <a href="http://www.baidu.com/" target="_blank" rel="external">示例2</a>没有title属性。</p>
+<p> 连接同主机的资源，可以使用相对路径：<br> 点击关于 <a href="/about">About</a> 查看详情。</p>
+<p> 参考形式的链接:</p>
+<ol>
+<li>使用另外一个[]接在链接文字的方括号后面，而在第二个[]里面要填入用以链接的标签。</li>
+<li><p>然后在文件的其它任意处，把<a href="url/to/image" title="title">id</a>标签链接内容定义出来。</p>
+<p>这是个 [参考链接][1] 的链接。<br>定义<a href="url/to/image" title="title">id</a></p>
+</li>
+</ol>
+<p>展示方式:<br>这是 示例1 inline link.<br>示例2 无title属性。</p>
+<p>点击关于 About 查看详情。</p>
+<p>这是个 参考链接 的链接。<br>强调</p>
+<p>MD使用<em>、_作为标记强调字词的符号。符号和文本之间不留空白<br> **`\</em>*<code>号展示着重文本形式**
+ _</code><em>`号展示斜体文本形式 </em></p>
+<p> <strong><code>\*\*</code> 号展示着重文本形式</strong><br> <strong><code>\_\_</code>号展示着重文本形式</strong><br>展示方式：<br>*号展示斜体文本形式</p>
+<p>_号展示斜体文本形式</p>
+<p>** 号展示着重文本形式</p>
+<p>__号展示着重文本形式<br>代码</p>
+<p>若要标记一小段行内代码，可以用<code>号将其包起来：
+ 文本中间有代码：</code>NSLog(@”hello world”);` 的MD标识方式。<br>展示方式：</p>
+<p>文本中间有代码：NSLog(@”hello world”); 的MD标识方式。<br>图片</p>
+<p>MD使用一种和链接很相似的语法来标记图片。同样也允许有2种样式：行内 和 参考。<br>( 目前为止，无法指定图谱安的宽高，如需要，则使用普通的 <img>标签 )<br>行内：</p>
+<p> ![alet 文本] (/path/to/img.jpg)<br> ![alet 文本] (/path/to/img.jpg “title”)<br>** 展示如下：<br>! [alet] (/path/to/img.jpg)<br>! [alet 文本] (/path/to/img.jpg “title”)</p>
+<p>参考：</p>
+<p> ! <a href="url/to/image" title="title">alert text</a></p>
+<p>展示<br>! alert text<br>a: url/to/image “title”<br>其他</p>
+<p>自动链接(MD支持简短的自动链接，以处理网址和email地址)：<br> <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br>展示：<br><a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+<p>邮箱：</p>
+<p> <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#97;&#x64;&#100;&#114;&#x65;&#x73;&#x73;&#x40;&#x65;&#x5f;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#97;&#x64;&#100;&#114;&#x65;&#x73;&#x73;&#x40;&#x65;&#x5f;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a><br>展示：<br>address@e_mail.com<br>跳脱字元</p>
+<p>MD可以利用 \来插入一些在语法中有其它意义的符号。如将<em>号置于文字旁边显示强调效果：<br> \</em>  这是个显示强调效果的文本。 * (此处无效果，待查)<br>展示<br><em>这是个显示强调效果的文本。</em></p>
+<p>Markdown支援在下面這些符號前面加上反斜線來幫助插入普通的符號:</p>
+<p> \   反斜線<br> `   反引號</p>
+<ul>
+<li>星號<br>_   底線<br>{}  大括號<br>[]  方括號<br>()  括號<h1 id="井字號"><a href="#井字號" class="headerlink" title="井字號"></a>井字號</h1></li>
+</ul>
+<ul>
+<li>加號</li>
+</ul>
+<ul>
+<li>減號<br>.   英文句點<br>!   驚嘆號<br>附：</li>
+</ul>
+<p>本文参考自 Markdown 语法说明 。<br>本文仅是参考文档的缩略版，方便自己快速查找语法的使用。随着自己不断的运用md工具，本文将不断积累。</p>
+<p>链接：<a href="http://www.jianshu.com/p/f7305002a30f" target="_blank" rel="external">http://www.jianshu.com/p/f7305002a30f</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-MarkDown语法示例" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/07/12/MarkDown语法示例/" class="article-date">
+      <time datetime="2017-07-12T08:41:04.542Z" itemprop="datePublished">2017-07-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>标题</p>
+<p>setext形式即用底线形式：最高级标题（=），二级标题（-）任何数量的‘=’和‘-’效果一样。</p>
+<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>展示方式：</p>
+<p>这是一级标题<br>atx形式：在行首插入1~6个’#’，分别对应1~6级标题（行尾的‘#’与效果无关）。</p>
+<h1 id="这是一级标题-1"><a href="#这是一级标题-1" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><p>展示方式：</p>
+<p>这是一级标题<br>区块引言</p>
+<p>在MD文件中建立一个区块引言，看起来像是强迫断行，然后在每行最前面加‘&gt;’,并且可循环套用。:</p>
+<blockquote>
+<p>区块引言文本1</p>
+<blockquote>
+<p>子区块引言文本2<br>展示方式：</p>
+</blockquote>
+</blockquote>
+<p>区块引言文本1</p>
+<p>子区块引言文本2<br>区块引言也允许在整个段落的第一行最前面加上‘&gt;’:</p>
+<blockquote>
+<p>这是个段落<br>段落中的详细文本。<br>blablabla。<br>展示方式:</p>
+</blockquote>
+<p>这是个段落<br>段落中的详细文本。<br>blablabla。<br>区块引言中亦可使用其它MD语法，包括标题、清单、程式等：</p>
+<blockquote>
+<h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><ol>
+<li>有序列表1.</li>
+<li>有序列表2</li>
+</ol>
+<p>代码实例：</p>
+<p>return shell_exec(“echo $input | $markdown_script”);<br>展示方式：</p>
+</blockquote>
+<p>二级标题</p>
+<p>有序列表1.<br>有序列表2<br>代码实例：</p>
+<p>return shell_exec(“echo $input | $markdown_script”);<br>清单</p>
+<p>MD支持有序列表和无序列表。</p>
+<p>无序列表使用*、+、-作为清单标记。(混用亦可)</p>
+<ul>
+<li>red</li>
+</ul>
+<ul>
+<li>Green</li>
+</ul>
+<ul>
+<li>blue<br>展示方式：</li>
+</ul>
+<p>red<br>Green<br>blue<br>有序列表使用数字接着一个英文句点：</p>
+<ol>
+<li>Bird</li>
+<li>McHale</li>
+<li>Parish<br>展示方式：</li>
+</ol>
+<p>Bird<br>McHale<br>Parish<br>可以让MD文件的清单数字和输出的结果一致，也可不一致，即随意输入数字;</p>
+<p>建议从1.开始，因为MD未来可能会有序列表的start属性。</p>
+<p>关于清单列表的缩排：</p>
+<p>清单标记通常放在最左边，其实亦可缩排，最多3个空白,但标记后面一定要接着至少一个空白或tab。</p>
+<p>清單項目可以包含多個段落，每個項目下的段落都必須縮排4個空白或是一個tab<br>在行首出现不预知的数字-句点-空白情况，可以在句点前加反斜杠<code>\</code>避免。</p>
+<ul>
+<li>这是第一行文本。<br>（加3个空白或者tab）这是第二行文本。<br>展示方式</li>
+</ul>
+<p>这是第一行文本。<br>这是第二行文本。<br>清单内引用区块引言，则&gt;需要缩进：</p>
+<ul>
+<li>在清单中内置区块引用：<br>(空白或tab) &gt; 需要缩排<br>展示方式：</li>
+</ul>
+<p>在清单中内置区块引用：</p>
+<blockquote>
+<p>需要缩排<br>如果要放程式区块的话，该区块引言就要缩排2次，即8个空白或2个tab:</p>
+</blockquote>
+<ul>
+<li>列表中放入代码：<br>(2个tab或8个空白缩进)代码在这里<br>展示方式:</li>
+</ul>
+<p>列表中放入代码：<br> NSLog(@”hello world”);<br>代码区块</p>
+<p>代码或者标识语言原始码写作通常已经有排版好的区块。故我们并不希望它以一般段落文本的方式去排版，而是原样输出即可。<br>MD自动会用<pre>和<code>标识来将代码块包起来。<br>_在程式碼區塊裡面，&amp;、&lt;和&gt;會自動轉成HTML實體，這樣的方式讓你非常容易使用Markdown插入範例用的HTML原始碼，只需要複製貼上，再加上縮排就可以了，剩下的Markdown都會幫你處理，<br>在MD中建立代码区块，只要简单的 缩排4个空白或1个tab即可。 (一个代码块会一直持续到没有缩排的那一行) ：</code></pre></p>
+<p>下面是个代码区块展示：<br>(4个空白或1个tab)NSLog(@”hello world”) ;<br>展示方式：<br>下面是个代码区块展示：</p>
+<p>NSLog(@”hello world”) ;<br>NSLog(@”hello china”) ;<br> <em> 附录：程式碼區塊中，一般的Markdown語法不會被轉換，像是星號便只是星號，這表示你可以很容易地以Markdown語法撰寫Markdown語法相關的文件。</em><br>分割线</p>
+<p>可在一行中用3个或者以上的<em>、-、<em>来建立一个分割线，但行内不能有其它元素。
+</em>亦可在</em>中间插入空白，均可建立分割线。<br>本示例以及下文中的MD原始语法，均以代码块的形式展示</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<p>展示方式：</p>
+<p>区段元素</p>
+<p>MD支持2种形式的链接语法：行内链接和参考链接。<br>链接的文字均是用[链接文字]来标识。<br>  行内链接<br>  这是 <a href="http://www.baidu.com/" title="title" target="_blank" rel="external">示例1</a> inline link.<br> <a href="http://www.baidu.com/" target="_blank" rel="external">示例2</a>没有title属性。</p>
+<p> 连接同主机的资源，可以使用相对路径：<br> 点击关于 <a href="/about">About</a> 查看详情。</p>
+<p> 参考形式的链接:</p>
+<ol>
+<li>使用另外一个[]接在链接文字的方括号后面，而在第二个[]里面要填入用以链接的标签。</li>
+<li><p>然后在文件的其它任意处，把<a href="url/to/image" title="title">id</a>标签链接内容定义出来。</p>
+<p>这是个 [参考链接][1] 的链接。<br>定义<a href="url/to/image" title="title">id</a></p>
+</li>
+</ol>
+<p>展示方式:<br>这是 示例1 inline link.<br>示例2 无title属性。</p>
+<p>点击关于 About 查看详情。</p>
+<p>这是个 参考链接 的链接。<br>强调</p>
+<p>MD使用<em>、_作为标记强调字词的符号。符号和文本之间不留空白<br> **`\</em>*<code>号展示着重文本形式**
+ _</code><em>`号展示斜体文本形式 </em></p>
+<p> <strong><code>\*\*</code> 号展示着重文本形式</strong><br> <strong><code>\_\_</code>号展示着重文本形式</strong><br>展示方式：<br>*号展示斜体文本形式</p>
+<p>_号展示斜体文本形式</p>
+<p>** 号展示着重文本形式</p>
+<p>__号展示着重文本形式<br>代码</p>
+<p>若要标记一小段行内代码，可以用<code>号将其包起来：
+ 文本中间有代码：</code>NSLog(@”hello world”);` 的MD标识方式。<br>展示方式：</p>
+<p>文本中间有代码：NSLog(@”hello world”); 的MD标识方式。<br>图片</p>
+<p>MD使用一种和链接很相似的语法来标记图片。同样也允许有2种样式：行内 和 参考。<br>( 目前为止，无法指定图谱安的宽高，如需要，则使用普通的 <img>标签 )<br>行内：</p>
+<p> ![alet 文本] (/path/to/img.jpg)<br> ![alet 文本] (/path/to/img.jpg “title”)<br>** 展示如下：<br>! [alet] (/path/to/img.jpg)<br>! [alet 文本] (/path/to/img.jpg “title”)</p>
+<p>参考：</p>
+<p> ! <a href="url/to/image" title="title">alert text</a></p>
+<p>展示<br>! alert text<br>a: url/to/image “title”<br>其他</p>
+<p>自动链接(MD支持简短的自动链接，以处理网址和email地址)：<br> <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a><br>展示：<br><a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a></p>
+<p>邮箱：</p>
+<p> <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x61;&#x64;&#100;&#114;&#101;&#x73;&#115;&#x40;&#101;&#95;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;">&#x61;&#x64;&#100;&#114;&#101;&#x73;&#115;&#x40;&#101;&#95;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#109;</a><br>展示：<br>address@e_mail.com<br>跳脱字元</p>
+<p>MD可以利用 \来插入一些在语法中有其它意义的符号。如将<em>号置于文字旁边显示强调效果：<br> \</em>  这是个显示强调效果的文本。 * (此处无效果，待查)<br>展示<br><em>这是个显示强调效果的文本。</em></p>
+<p>Markdown支援在下面這些符號前面加上反斜線來幫助插入普通的符號:</p>
+<p> \   反斜線<br> `   反引號</p>
+<ul>
+<li>星號<br>_   底線<br>{}  大括號<br>[]  方括號<br>()  括號<h1 id="井字號"><a href="#井字號" class="headerlink" title="井字號"></a>井字號</h1></li>
+</ul>
+<ul>
+<li>加號</li>
+</ul>
+<ul>
+<li>減號<br>.   英文句點<br>!   驚嘆號<br>附：</li>
+</ul>
+<p>本文参考自 Markdown 语法说明 。<br>本文仅是参考文档的缩略版，方便自己快速查找语法的使用。随着自己不断的运用md工具，本文将不断积累。</p>
+<p>链接：<a href="http://www.jianshu.com/p/f7305002a30f" target="_blank" rel="external">http://www.jianshu.com/p/f7305002a30f</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-内涵段子项目目录" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -464,14 +790,14 @@
                 2016-2017 Elives
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -480,7 +806,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -513,9 +839,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
